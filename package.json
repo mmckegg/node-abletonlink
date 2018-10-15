@@ -9,7 +9,7 @@
   "scripts": {
     "node-gyp": "node-gyp",
     "ndts": "ndts",
-    "prebuild": "prebuildify --target=electron@1.6.15 --strip",
+    "prebuild": "prebuildify --target=electron@1.6.15 --target=node@8.9.4 --strip",
     "install": "autogypi && node-gyp-build"
   },
   "keywords": [],
