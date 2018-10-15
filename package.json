@@ -10,7 +10,7 @@
     "node-gyp": "node-gyp",
     "ndts": "ndts",
     "prebuild": "prebuildify --target=electron@1.6.15 --strip",
-    "install": "npm config set msvs_version 2015 && autogypi && node-gyp rebuild"
+    "install": "autogypi && node-gyp-build"
   },
   "keywords": [],
   "repository": {
