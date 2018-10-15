@@ -1,6 +1,6 @@
 {
   "name": "abletonlink",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "ableton link for node.js",
   "main": "index.js",
   "directories": {
@@ -9,8 +9,9 @@
   "scripts": {
     "node-gyp": "node-gyp",
     "ndts": "ndts",
-    "install": "autogypi && node-gyp-build",
-    "prebuild": "prebuildify -a --strip"
+    "prebuild": "prebuildify -a --strip",
+    "install": "npm run build",
+    "build": "npm config set msvs_version 2015 && autogypi && node-gyp-build"
   },
   "keywords": [],
   "repository": {
@@ -21,11 +22,14 @@
   "license": "MIT",
   "dependencies": {
     "autogypi": "^0.2.2",
-    "nbind": "^0.3.9",
+    "nbind": "^0.3.14",
     "node-gyp": "^3.5.0",
     "node-gyp-build": "^3.2.2"
   },
   "devDependencies": {
     "prebuildify": "^2.4.3"
+  },
+  "engines": {
+    "node" : ">=6.0.0"
   }
 }
